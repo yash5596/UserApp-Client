@@ -1,0 +1,33 @@
+<md-toolbar class="login-toolbar" color="primary">
+  <h1><strong>User App</strong></h1>
+</md-toolbar>
+<div class="container" style="width:600px; margin:auto">
+  <div class="col-3 tab-wrapper">
+    <form action="" #form="ngForm" (ngSubmit)="Signup()">
+      <md-input-container class="input-full-width">
+        <md-icon mdPrefix class="prefix-icon">person</md-icon>
+        <input mdInput placeholder="First Name" value="" type="text" name="firstname" [(ngModel)]="user.fname" #fname="ngModel" required>
+        <md-error>First Name is <strong>required</strong></md-error>
+      </md-input-container>
+      <md-input-container class="input-full-width">
+        <md-icon mdPrefix class="prefix-icon">person</md-icon>
+        <input mdInput placeholder="Last Name" type="text" name="lastname" [(ngModel)]="user.lname" #lname="ngModel" required>
+        <md-error>Last Name is <strong>required</strong></md-error>
+      </md-input-container>
+      <md-input-container class="input-full-width">
+        <md-icon mdPrefix class="prefix-icon">email</md-icon>
+        <input mdInput placeholder="Email" type="email" name="email" [(ngModel)]="user.email" #email="ngModel" required="email">
+        <md-error>Email is <strong>required</strong></md-error>
+      </md-input-container>
+      <md-input-container class="input-full-width">
+        <md-icon mdPrefix class="prefix-icon">lock</md-icon>
+        <input mdInput placeholder="Password" type="password" name="password" [(ngModel)]="user.password" #password="ngModel" required>
+        <md-error>Password is <strong>required</strong></md-error>
+      </md-input-container>
+      <button md-raised-button color="accent" class="button full-width-btn" [disabled]="!form.valid" type="submit">Submit</button>
+      <br/>
+      <md-error><strong>{{error}}</strong></md-error>
+    </form>
+    <button md-raised-button color="accent" class="button full-width-btn" [routerLink]="['/login']">Click to Login</button>
+  </div>
+</div>

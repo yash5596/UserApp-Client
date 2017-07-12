@@ -1,0 +1,45 @@
+<md-toolbar class="login-toolbar" color="primary">
+  <h1><strong>User App</strong></h1>
+    <button md-raised-button color="accent" (click)="Logout()">Logout</button>
+</md-toolbar>
+
+<!--<div class="container" style="width:600px; margin:auto">
+  <div class="col-3 tab-wrapper">
+    <strong>Profile</strong>
+  </div>
+  <div class="col-3 tab-wrapper">
+    <strong>Payment Details</strong>
+  </div>
+</div>-->
+<div class="parent-div">
+  <md-card class="example-card">
+    <md-card-header style="justify-content:center">
+      <img height="120px" width="86px" src="http://www.freeiconspng.com/uploads/user-icon-png-person-user-profile-icon-20.png" alt="Credit Card">
+      <!--<div md-card-avatar class="example-header-image"></div>-->
+      <!--<md-card-title></md-card-title>-->
+    </md-card-header>
+    <md-card-content style="justify-content:center">
+      <p>
+        <strong>User Profile Settings : </strong> Edit User Settings.
+      </p>
+    </md-card-content>
+    <md-card-actions style="justify-content:center">
+      <button [routerLink]="['/profile']" color="primary" md-button>EDIT</button>
+    </md-card-actions>
+  </md-card>
+  <md-card class="example-card">
+    <md-card-header style="justify-content:center">
+      <img src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/ya/images/Payments._CB529917462_.png" alt="Credit Card">
+      <!--<div md-card-avatar class="example-header-image"></div>-->
+      <!--<md-card-title></md-card-title>-->
+    </md-card-header>
+    <md-card-content style="justify-content:center">
+      <p>
+        <strong>Payment Settings : </strong> Edit your payment methods.
+      </p>
+    </md-card-content>
+    <md-card-actions style="justify-content:center">
+      <button [routerLink]="['/cards']" color="primary" md-button>EDIT</button>
+    </md-card-actions>
+  </md-card>
+</div>

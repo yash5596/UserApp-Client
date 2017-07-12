@@ -1,0 +1,43 @@
+<md-toolbar class="login-toolbar" color="primary">
+  <h1><strong>User App - Cards</strong></h1>
+  <button md-raised-button color="accent" (click)="Logout()">Logout</button>
+</md-toolbar>
+<div class="container" style="width:600px; margin:auto">
+  <div class="col-3 tab-wrapper">
+    <form action="" #form="ngForm" (ngSubmit)="saveCard()">
+      <md-input-container class="input-full-width">
+        <md-icon mdPrefix class="prefix-icon">email</md-icon>
+        <input mdInput placeholder="Card Holder Name" type="email" name="name" [(ngModel)]="card.name" #name="ngModel" required="email">
+        <md-error>Card Holder's Name is <strong>required</strong></md-error>
+      </md-input-container>
+      <md-input-container class="input-full-width">
+        <md-icon mdPrefix class="prefix-icon">lock</md-icon>
+        <input mdInput placeholder="Card Number" name="cardNumber" [(ngModel)]="card.cardNumber" #cardNumber="ngModel" required>
+        <md-error>Card Number is <strong>required</strong></md-error>
+      </md-input-container>
+      <md-input-container class="input-full-width">
+        <md-icon mdPrefix class="prefix-icon">lock</md-icon>
+        <input mdInput placeholder="Expiry Date" name="expiryDate" [(ngModel)]="card.expiryDate" #expiryDate="ngModel" required>
+        <md-error>Expiry Date is <strong>required</strong></md-error>
+      </md-input-container>
+      <button md-raised-button color="accent" class="button full-width-btn" [disabled]="!form.valid" type="submit">Save Card</button>
+      <md-error>{{error}}</md-error>
+    </form>
+  </div>
+</div>
+<table *ngIf="cards.length" border="1px solid black" style="margin:auto; width:600px">
+  <thead>
+    <th>Card Name</th>
+    <th>Card Number</th>
+    <th>Expiry Date</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let card of cards">
+      <td>{{card.name}}</td>
+      <td>{{card.cardNumber}}</td>
+      <td>{{card.expiryDate}}</td>
+      <td style="cursor:pointer"><a (click)="selectCard(card._id)"><strong>Edit</strong></a></td>
+    </tr>
+  </tbody>
+</table>

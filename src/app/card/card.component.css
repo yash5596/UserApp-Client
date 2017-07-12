@@ -1,0 +1,144 @@
+.example-card .mat-card-header-text{
+    margin: 0;  
+}
+
+.card-list{
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-right: 5px;
+    margin: 20px 0;
+}
+.card-list-height{
+    height: 757px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.team-member-group{
+    float: right;
+    margin-top: 20px;
+}
+.team-member{
+    margin-right: 7px;
+    margin-bottom: 0;
+}
+
+.carditem-first{
+    padding: 10px;
+    border-right: 1px solid #fff;
+    width: 310px;
+    min-width: 310px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 50px
+}
+
+.card-container{
+    height: calc(100% - 78px);
+}
+.card-wrapper{
+    display: inline;
+}
+.card-flex{
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    /*display: box;*/
+    flex-flow: 1 1 auto;
+    -webkit-flex-flow: 1 1 auto;
+    height: calc(100% - 50px);
+    background: rgba(136, 149, 220, 0.14);
+}
+.card-item{
+        border-right: 1px solid rgba(137, 161, 186, 0.14);
+    width: 310px;
+    min-width: 310px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /*-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;*/
+}
+.card-list{
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-right: 5px;
+    margin: 20px 0;
+}
+.card-list-height{
+    height: 757px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.mat-card{
+    padding: 10px;
+}
+.example-card {
+  overflow: hidden;
+  margin: 10px;
+}
+.mat-card-header .mat-card-subtitle:not(:first-child){
+    margin-top: 0;
+}
+.mat-card-actions, .mat-card-content, .mat-card-subtitle, .mat-card-title{
+    margin-bottom: 0
+}
+.card{
+    z-index: 1;
+    padding-right: 20px;
+}
+.card .mat-card-header{
+    justify-content: space-between;
+}
+.example-header-image {
+  background-size: cover;
+}
+.team-member-group{
+    float: right;
+    margin-top: 20px;
+}
+.team-member{
+    margin-right: 7px;
+    margin-bottom: 0;
+}
+.mat-card-title-group{
+    justify-content: initial;
+}
+.example-card .mat-card-header-text{
+    margin: 0;  
+}
+.mat-card.card.add-new-card{
+    background: #0091EA
+;
+    padding: 0;
+}
+.newphase{
+    width: 100%;
+    padding: 15px;
+}
+.newphase .mat-icon.material-icons{
+    color: #fff;
+}
